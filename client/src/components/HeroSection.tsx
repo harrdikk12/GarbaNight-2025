@@ -43,7 +43,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="mb-8"
         >
-          <p className="text-yellow-500 text-lg mb-2">From tradition</p>
+          <p className="text-yellow-500 text-lg mb-2">Experience the Unforgettable</p>
           <p className="text-6xl md:text-8xl font-light mb-4">to celebration</p>
         </motion.div>
         
@@ -75,7 +75,7 @@ export default function HeroSection() {
         >
           <p className="text-xl md:text-2xl text-gray-300 mb-4">begins here.</p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Journey into the wonderful world of Raatladi® Garba
+            Presented by Zala Events - Ahmedabad, dive into the heart of Gujarat's most vibrant Garba celebration!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
