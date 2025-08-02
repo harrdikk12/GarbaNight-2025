@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function HeroSection() {
   const scrollToTickets = () => {
@@ -111,24 +112,27 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
-                onClick={scrollToTickets}
-                size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
-              >
-                BOOK YOUR PASS NOW!
-              </Button>
+              <Link href="/gallery">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
+                >
+                  BOOK YOUR PASS NOW!
+                </Button>
+              </Link>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
-              >
-                WATCH TRAILER
-              </Button>
+              <Link href="/gallery">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
+                >
+                  WATCH TRAILER
+                </Button>
+              </Link>
             </motion.div>
           </div>
           
