@@ -87,7 +87,7 @@ export default function HeroSection() {
         >
           <p className="text-xl md:text-2xl text-gray-300 mb-4">begins here.</p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Presented by Zala Events - Ahmedabad, dive into the heart of Gujarat's most vibrant Garba celebration!
+            Experience the Unforgettable! Dive into the heart of Gujarat's most vibrant Garba celebration with the profound, passionate love for our traditions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
