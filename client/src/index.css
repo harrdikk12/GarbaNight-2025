@@ -128,7 +128,8 @@
   }
 
   .glow-effect {
-    filter: drop-shadow(0 0 20px rgba(185, 28, 28, 0.3));
+    filter: drop-shadow(0 0 20px rgba(185, 28, 28, 0.5));
+    text-shadow: 0 0 30px rgba(185, 28, 28, 0.8);
   }
 
   .section-separator {

@@ -71,9 +71,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-4xl md:text-6xl font-light mb-4"
+            className="text-4xl md:text-6xl mb-4"
           >
-            <span className="laal-gradient font-serif italic">Laal Ishq</span>
+            <span className="text-red-500 font-serif italic font-bold glow-effect">Laal Ishq</span>
             <span className="text-yellow-500 ml-4 font-bold">2025</span>
           </motion.div>
         </motion.div>
