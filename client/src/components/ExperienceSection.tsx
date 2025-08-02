@@ -55,8 +55,8 @@ export default function ExperienceSection() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-black mb-8">
-            The <em>real</em><br />
-            <span className="laal-gradient">limitless</span> experience.
+            <span className="text-red-500 glow-effect">The</span> <span className="text-red-500 glow-effect"><em>real</em></span><br />
+            <span className="text-red-500 glow-effect">limitless</span> <span className="text-red-500 glow-effect">experience.</span>
           </h2>
           <p className="text-xl text-gray-400">discover the magic</p>
         </motion.div>

@@ -30,8 +30,8 @@ export default function TicketsSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl md:text-7xl font-black mb-8">
-            Book Your<br />
-            <span className="laal-gradient">Laal Ishq</span> Experience
+            <span className="text-red-500 glow-effect">Book Your</span><br />
+            <span className="text-red-500 glow-effect">Laal Ishq</span> <span className="text-red-500 glow-effect">Experience</span>
           </h2>
         </motion.div>
         

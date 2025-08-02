@@ -59,7 +59,7 @@ export default function HighlightsSection() {
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-16"
           >
-            What to Expect at <span className="laal-gradient">Raatladi - Laal Ishq 2025</span>
+            <span className="text-red-500 glow-effect">What to Expect at</span> <span className="text-red-500 glow-effect">Raatladi - Laal Ishq 2025</span>
           </motion.h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +98,7 @@ export default function HighlightsSection() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4">the miracle of tradition</h2>
+            <h2 className="text-3xl font-bold mb-4"><span className="text-red-500 glow-effect">the miracle of tradition</span></h2>
             <p className="text-xl">100% <strong>authentic</strong> and <strong>traditional</strong> <span className="text-red-500">cultural experience.</span></p>
           </motion.div>
           
