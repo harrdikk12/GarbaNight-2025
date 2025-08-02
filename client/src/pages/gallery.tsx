@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useQuery, useMutation } from '@tanstack/react-query';
-import { Upload, Play, Image, Video, Plus, X } from 'lucide-react';
+import { Upload, Play, Image, Video, Plus, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -11,6 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import { apiRequest, queryClient } from '@/lib/queryClient';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import Navigation from '@/components/Navigation';
+import { Link } from 'wouter';
 
 interface GalleryItem {
   id: string;
@@ -73,7 +74,7 @@ export default function Gallery() {
   });
 
   const handleAdminLogin = () => {
-    if (adminPassword === 'raatladi2025') {
+    if (adminPassword === 'Hrdk@1212') {
       setIsAdmin(true);
       setShowAdminLogin(false);
       toast({
@@ -107,6 +108,21 @@ export default function Gallery() {
       
       <section className="pt-24 md:pt-32 pb-12 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
+          {/* Back Button */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="mb-6"
+          >
+            <Link href="/">
+              <Button className="bg-gray-800/50 hover:bg-gray-700/50 text-white border border-red-500/30 hover:border-red-500/50 transition-all">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Home
+              </Button>
+            </Link>
+          </motion.div>
+
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
@@ -243,14 +259,14 @@ export default function Gallery() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="group relative"
+                    className="group relative will-change-auto"
                   >
                     {/* Mobile: Simple layout without glass card for videos */}
                     <div className="md:hidden">
                       {isAdmin && (
                         <button
                           onClick={() => deleteItemMutation.mutate(item.id)}
-                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full"
+                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full transform-gpu"
                         >
                           <X className="h-4 w-4 text-white" />
                         </button>
@@ -262,6 +278,7 @@ export default function Gallery() {
                             src={item.url}
                             alt={item.title}
                             className="w-full h-full object-cover"
+                            loading="lazy"
                           />
                         ) : (
                           <video
@@ -289,11 +306,11 @@ export default function Gallery() {
                     </div>
 
                     {/* Desktop: Full glass card layout */}
-                    <div className="hidden md:block glass-card rounded-2xl overflow-hidden">
+                    <div className="hidden md:block glass-card rounded-2xl overflow-hidden transform-gpu will-change-auto">
                       {isAdmin && (
                         <button
                           onClick={() => deleteItemMutation.mutate(item.id)}
-                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform-gpu"
                         >
                           <X className="h-4 w-4 text-white" />
                         </button>
@@ -304,7 +321,8 @@ export default function Gallery() {
                           <img
                             src={item.url}
                             alt={item.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 transform-gpu will-change-transform"
+                            loading="lazy"
                           />
                         ) : (
                           <div className="relative w-full h-full bg-gray-800 flex items-center justify-center">
