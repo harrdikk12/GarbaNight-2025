@@ -21,8 +21,9 @@ export default function TicketsSection() {
         />
       </div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.div
+      <div className="relative z-10 max-w-4xl mx-auto px-6">
+        <div className="glass-card rounded-3xl p-12 text-center">
+          <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -126,6 +127,7 @@ export default function TicketsSection() {
         >
           Book exclusively from: "Raatladi - The Mandli Garba - Laal Ishq'25 | Ahmedabad"
         </motion.p>
+        </div>
       </div>
     </section>
   );

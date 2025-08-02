@@ -51,7 +51,8 @@ export default function HighlightsSection() {
       {/* Highlights */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-6xl mx-auto px-6">
-          <motion.h2
+          <div className="glass-card rounded-3xl p-12">
+            <motion.h2
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -83,13 +84,15 @@ export default function HighlightsSection() {
               </motion.div>
             ))}
           </div>
+          </div>
         </div>
       </section>
 
       {/* Quality Badges */}
       <section className="py-24 bg-black">
         <div className="max-w-6xl mx-auto px-6">
-          <motion.div
+          <div className="glass-card rounded-3xl p-12">
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
@@ -119,6 +122,7 @@ export default function HighlightsSection() {
                 <p className="text-sm font-medium group-hover:text-white transition-colors">{badge.title}</p>
               </motion.div>
             ))}
+          </div>
           </div>
         </div>
       </section>

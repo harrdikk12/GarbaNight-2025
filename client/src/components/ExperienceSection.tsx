@@ -46,7 +46,8 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="py-24 bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div
+        <div className="glass-card rounded-3xl p-12">
+          <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -98,6 +99,7 @@ export default function ExperienceSection() {
         </div>
         
         <div className="section-separator mt-16"></div>
+        </div>
       </div>
     </section>
   );

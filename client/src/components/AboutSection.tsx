@@ -7,8 +7,9 @@ export default function AboutSection() {
 
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-black to-gray-900">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <motion.div
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="glass-card rounded-3xl p-12 text-center">
+          <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
@@ -75,6 +76,7 @@ export default function AboutSection() {
         </motion.div>
         
         <div className="section-separator"></div>
+        </div>
       </div>
     </section>
   );
