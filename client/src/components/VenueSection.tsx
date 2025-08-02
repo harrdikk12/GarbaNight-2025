@@ -42,13 +42,21 @@ export default function VenueSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isVisible ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="bg-black/60 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto mb-8"
+          className="glass-card rounded-3xl p-10 max-w-3xl mx-auto mb-8 group"
         >
-          <h3 className="text-2xl font-bold text-yellow-500 mb-4">MAHENDRA FARM</h3>
-          <p className="text-gray-300 mb-4">
+          <motion.h3 
+            className="text-3xl font-bold text-yellow-500 mb-6 text-center"
+            whileHover={{ scale: 1.05 }}
+          >
+            MAHENDRA FARM
+          </motion.h3>
+          <p className="text-gray-200 mb-6 text-lg leading-relaxed text-center">
             Explore the spacious and beautifully adorned grounds of Mahendra Farm, transformed into a dazzling haven for Garba enthusiasts right here in Ahmedabad.
           </p>
-          <p className="text-sm text-gray-400">Search "MAHENDRA FARM" on Google Maps for exact location</p>
+          <div className="flex items-center justify-center space-x-2 text-gray-400">
+            <span className="text-red-400">📍</span>
+            <p className="text-sm">Search "MAHENDRA FARM" on Google Maps for exact location</p>
+          </div>
         </motion.div>
         
         <motion.div
@@ -56,13 +64,18 @@ export default function VenueSection() {
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <Button
-            onClick={openGoogleMaps}
-            size="lg"
-            className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Get Directions
-          </Button>
+            <Button
+              onClick={openGoogleMaps}
+              size="lg"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all shadow-2xl glow-effect"
+            >
+              Get Directions 📍
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

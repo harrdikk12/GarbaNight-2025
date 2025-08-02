@@ -92,13 +92,28 @@
     color: hsl(var(--gold-500));
   }
 
+  .glass-card {
+    background: rgba(17, 24, 39, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(185, 28, 28, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 35px 70px -12px rgba(185, 28, 28, 0.4);
+    border-color: rgba(185, 28, 28, 0.4);
+  }
+
   .card-hover {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px -12px hsla(var(--laal-700), 0.25);
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 35px 70px -12px rgba(185, 28, 28, 0.4);
   }
 
   .parallax-bg {
@@ -106,6 +121,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-effect {
+    filter: drop-shadow(0 0 20px rgba(185, 28, 28, 0.3));
+  }
+
+  .section-separator {
+    background: linear-gradient(90deg, transparent, rgba(185, 28, 28, 0.5), transparent);
+    height: 1px;
+    margin: 4rem 0;
   }
 
   @media (max-width: 768px) {

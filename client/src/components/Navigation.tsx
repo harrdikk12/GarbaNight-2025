@@ -57,12 +57,14 @@ export default function Navigation() {
             ))}
           </div>
           
-          <Button 
-            onClick={() => scrollToSection('tickets')}
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
-            Book Now
-          </Button>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button 
+              onClick={() => scrollToSection('tickets')}
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg glow-effect"
+            >
+              Book Now
+            </Button>
+          </motion.div>
         </div>
       </div>
     </motion.nav>

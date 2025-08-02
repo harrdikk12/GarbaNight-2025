@@ -38,11 +38,16 @@ export default function TicketsSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isVisible ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="bg-black/80 backdrop-blur-md rounded-3xl p-12 mb-8"
+          className="glass-card rounded-3xl p-12 mb-8 group"
         >
-          <div className="mb-8">
-            <h3 className="text-3xl font-bold text-yellow-500 mb-4">Starting from ₹999</h3>
-            <p className="text-gray-400 mb-6">Limited passes available - Book now to secure your spot!</p>
+          <div className="mb-8 text-center">
+            <motion.h3 
+              className="text-4xl font-bold text-yellow-500 mb-4"
+              whileHover={{ scale: 1.1 }}
+            >
+              Starting from ₹999
+            </motion.h3>
+            <p className="text-gray-300 mb-6 text-lg">Limited passes available - Book now to secure your spot!</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -50,28 +55,32 @@ export default function TicketsSection() {
               initial={{ opacity: 0, x: -30 }}
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-left"
+              className="glass-card rounded-2xl p-6 text-left"
             >
-              <h4 className="text-xl font-bold text-red-500 mb-3">Event Details:</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>📅 Navratri 2025 (September - October)</li>
-                <li>⏰ 8:00 PM onwards, nightly</li>
-                <li>📍 Mahendra Farm, Ahmedabad</li>
-                <li>👨‍👩‍👧‍👦 All ages welcome</li>
+              <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center">
+                <span className="mr-2">📅</span> Event Details:
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center"><span className="mr-3">📅</span> Navratri 2025 (September - October)</li>
+                <li className="flex items-center"><span className="mr-3">⏰</span> 8:00 PM onwards, nightly</li>
+                <li className="flex items-center"><span className="mr-3">📍</span> Mahendra Farm, Ahmedabad</li>
+                <li className="flex items-center"><span className="mr-3">👨‍👩‍👧‍👦</span> All ages welcome</li>
               </ul>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={isVisible ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-left"
+              className="glass-card rounded-2xl p-6 text-left"
             >
-              <h4 className="text-xl font-bold text-red-500 mb-3">Includes:</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>✅ Traditional Gujarati delicacies</li>
-                <li>✅ Professional photography</li>
-                <li>✅ Premium decorations</li>
-                <li>✅ Full security coverage</li>
+              <h4 className="text-xl font-bold text-red-400 mb-4 flex items-center">
+                <span className="mr-2">✨</span> Includes:
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center"><span className="mr-3">✅</span> Traditional Gujarati delicacies</li>
+                <li className="flex items-center"><span className="mr-3">✅</span> Professional photography</li>
+                <li className="flex items-center"><span className="mr-3">✅</span> Premium decorations</li>
+                <li className="flex items-center"><span className="mr-3">✅</span> Full security coverage</li>
               </ul>
             </motion.div>
           </div>
@@ -80,22 +89,32 @@ export default function TicketsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center"
           >
-            <Button
-              onClick={openBookingPage}
-              size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              BOOK YOUR PASS NOW!
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-12 py-4 rounded-full text-xl font-semibold transition-all"
+              <Button
+                onClick={openBookingPage}
+                size="lg"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all shadow-2xl glow-effect"
+              >
+                BOOK YOUR PASS NOW! 🎫
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Watch Highlights
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="glass-card border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-12 py-4 rounded-full text-xl font-semibold transition-all"
+              >
+                Watch Highlights 📺
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
         

@@ -43,8 +43,8 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="mb-8"
         >
-          <p className="text-yellow-500 text-lg mb-2">Experience the Unforgettable</p>
-          <p className="text-6xl md:text-8xl font-light mb-4">to celebration</p>
+          <p className="text-yellow-500 text-lg mb-2 floating-animation">Experience the Unforgettable</p>
+          <p className="text-4xl md:text-6xl font-light mb-4 glow-effect">Raatladi - Laal Ishq 2025</p>
         </motion.div>
         
         <motion.div
@@ -78,21 +78,31 @@ export default function HeroSection() {
             Presented by Zala Events - Ahmedabad, dive into the heart of Gujarat's most vibrant Garba celebration!
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button
-              onClick={scrollToTickets}
-              size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105"
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              BOOK YOUR PASS NOW!
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition-all"
+              <Button
+                onClick={scrollToTickets}
+                size="lg"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect"
+              >
+                BOOK YOUR PASS NOW!
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              WATCH TRAILER
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="glass-card border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-10 py-4 rounded-full text-lg font-semibold transition-all"
+              >
+                WATCH TRAILER
+              </Button>
+            </motion.div>
           </div>
           
           <motion.p

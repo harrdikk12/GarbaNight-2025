@@ -68,12 +68,18 @@ export default function HighlightsSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="bg-gray-800/50 rounded-2xl p-8 card-hover"
+                className="glass-card rounded-2xl p-8 group"
               >
-                <h3 className="text-xl font-bold text-red-500 mb-4">
-                  {highlight.icon} {highlight.title}
-                </h3>
-                <p className="text-gray-400">{highlight.description}</p>
+                <motion.h3 
+                  className="text-xl font-bold text-red-500 mb-4 group-hover:text-red-400 transition-colors"
+                  whileHover={{ x: 10 }}
+                >
+                  <span className="text-2xl mr-3">{highlight.icon}</span>
+                  {highlight.title}
+                </motion.h3>
+                <p className="text-gray-400 group-hover:text-gray-300 leading-relaxed transition-colors">
+                  {highlight.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -93,19 +99,24 @@ export default function HighlightsSection() {
             <p className="text-xl">100% <strong>authentic</strong> and <strong>traditional</strong> <span className="text-red-500">cultural experience.</span></p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {qualityBadges.map((badge, index) => (
               <motion.div
                 key={badge.title}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isVisible ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="text-center p-6 bg-gray-800/30 rounded-xl card-hover"
+                className="glass-card text-center p-6 rounded-xl group"
+                whileHover={{ y: -10, scale: 1.05 }}
               >
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-sm">{badge.icon}</span>
-                </div>
-                <p className="text-sm font-medium">{badge.title}</p>
+                <motion.div 
+                  className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <span className="text-sm font-bold">{badge.icon}</span>
+                </motion.div>
+                <p className="text-sm font-medium group-hover:text-white transition-colors">{badge.title}</p>
               </motion.div>
             ))}
           </div>

@@ -76,22 +76,28 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 * index }}
-              className="card-hover bg-gray-800/50 backdrop-blur-sm border border-red-700/20 rounded-2xl p-8 text-center"
+              className="glass-card rounded-2xl p-8 text-center group"
             >
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <motion.div 
+                className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
                 <span className="text-2xl">{benefit.icon}</span>
-              </div>
-              <h3 className={`text-xl font-bold mb-4 ${benefit.color}`}>{benefit.title}</h3>
-              <div className="text-sm text-gray-400 space-y-2">
+              </motion.div>
+              <h3 className={`text-xl font-bold mb-4 ${benefit.color} group-hover:text-white transition-colors`}>{benefit.title}</h3>
+              <div className="text-sm text-gray-400 group-hover:text-gray-300 space-y-3 transition-colors">
                 {benefit.points.map((point, pointIndex) => (
-                  <p key={pointIndex}>
-                    <strong>0{pointIndex + 1}</strong> {point}
+                  <p key={pointIndex} className="leading-relaxed">
+                    <strong className="text-red-400">0{pointIndex + 1}</strong> {point}
                   </p>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
+        
+        <div className="section-separator mt-16"></div>
       </div>
     </section>
   );
