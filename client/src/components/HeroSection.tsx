@@ -97,8 +97,9 @@ export default function HeroSection() {
             >
               <Button
                 onClick={scrollToTickets}
+                variant="outline"
                 size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect"
+                className="glass-card border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-10 py-4 rounded-full text-lg font-semibold transition-all"
               >
                 BOOK YOUR PASS NOW!
               </Button>
