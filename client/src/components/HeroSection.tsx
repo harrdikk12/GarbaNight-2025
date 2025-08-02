@@ -43,29 +43,39 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="mb-8"
         >
-          <p className="text-yellow-500 text-lg mb-2 floating-animation">Experience the Unforgettable</p>
-          <p className="text-4xl md:text-6xl font-light mb-4 glow-effect">Raatladi - Laal Ishq 2025</p>
+          <p className="text-yellow-500 text-lg mb-6 floating-animation">Experience the Unforgettable</p>
         </motion.div>
         
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-8xl md:text-9xl font-black mb-8 leading-none"
+          transition={{ duration: 1, delay: 0.3 }}
+          className="mb-8"
         >
-          <div className="laal-gradient">
-            <LetterFloat>L</LetterFloat>
-            <LetterFloat>a</LetterFloat>
-            <LetterFloat>a</LetterFloat>
-            <LetterFloat>l</LetterFloat>
+          {/* Main Title - Raatladi */}
+          <div className="text-7xl md:text-9xl font-black mb-6 leading-none">
+            <div className="text-white glow-effect">
+              <LetterFloat>R</LetterFloat>
+              <LetterFloat>a</LetterFloat>
+              <LetterFloat>a</LetterFloat>
+              <LetterFloat>t</LetterFloat>
+              <LetterFloat>l</LetterFloat>
+              <LetterFloat>a</LetterFloat>
+              <LetterFloat>d</LetterFloat>
+              <LetterFloat>i</LetterFloat>
+            </div>
           </div>
-          <br />
-          <div className="text-white">
-            <LetterFloat>I</LetterFloat>
-            <LetterFloat>s</LetterFloat>
-            <LetterFloat>h</LetterFloat>
-            <LetterFloat>q</LetterFloat>
-          </div>
+          
+          {/* Subtitle - Laal Ishq 2025 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-4xl md:text-6xl font-light mb-4"
+          >
+            <span className="laal-gradient font-serif italic">Laal Ishq</span>
+            <span className="text-yellow-500 ml-4 font-bold">2025</span>
+          </motion.div>
         </motion.div>
         
         <motion.div
