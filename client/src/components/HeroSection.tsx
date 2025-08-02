@@ -43,7 +43,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="mb-8"
         >
-          <p className="text-yellow-500 text-lg mb-6 floating-animation">Experience the Unforgettable</p>
+          <p className="text-yellow-500 text-lg mb-6 font-semibold">Presented by Zala Events - Ahmedabad</p>
         </motion.div>
         
         <motion.div
