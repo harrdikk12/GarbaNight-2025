@@ -1,0 +1,600 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raatladi - Laal Ishq 2025 | The Ultimate Garba Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'laal': {
+                            50: '#FEF2F2',
+                            100: '#FEE2E2',
+                            500: '#EF4444',
+                            600: '#DC2626',
+                            700: '#B91C1C',
+                            800: '#991B1B',
+                            900: '#7F1D1D'
+                        },
+                        'gold': {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in': 'fadeIn 1s ease-in',
+                        'slide-up': 'slideUp 0.8s ease-out'
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .text-scattered {
+            display: inline-block;
+            position: relative;
+        }
+        .letter-float {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .letter-float:hover {
+            transform: translateY(-5px);
+            color: #F59E0B;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #DC2626, #F59E0B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(185, 28, 28, 0.25);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0F0F0F 0%, #1F2937 100%);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s ease;
+        }
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-inter overflow-x-hidden">
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="text-center">
+            <div class="w-20 h-20 border-4 border-laal-700 border-t-gold-500 rounded-full animate-spin mx-auto mb-6"></div>
+            <h2 class="text-2xl font-bold text-white mb-4">Raatladi - Laal Ishq 2025</h2>
+            <p class="text-gray-400">Click anywhere to enable audio and begin your journey</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-laal-700/20">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">Raatladi</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="hover:text-gold-500 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-gold-500 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-gold-500 transition-colors">Experience</a>
+                    <a href="#venue" class="hover:text-gold-500 transition-colors">Venue</a>
+                    <a href="#tickets" class="hover:text-gold-500 transition-colors">Tickets</a>
+                </div>
+                <button class="bg-laal-600 hover:bg-laal-700 px-6 py-2 rounded-full transition-colors">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <!-- Dynamic background with multiple Garba celebration images -->
+        <div class="absolute inset-0 z-0">
+            <!-- Main hero background - vibrant Garba celebration -->
+            <div class="absolute inset-0 parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');">
+                <!-- A vibrant Garba dance celebration with colorful traditional costumes and energetic dancers -->
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-laal-900/60 to-black/80"></div>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-6xl mx-auto px-6">
+            <div class="mb-8 animate-fade-in">
+                <p class="text-gold-500 text-lg mb-2">From tradition</p>
+                <p class="text-6xl md:text-8xl font-light mb-4">to celebration</p>
+            </div>
+            
+            <div class="text-8xl md:text-9xl font-black mb-8 leading-none">
+                <span class="text-scattered gradient-text">
+                    <span class="letter-float">L</span><span class="letter-float">a</span><span class="letter-float">a</span><span class="letter-float">l</span>
+                </span>
+                <br>
+                <span class="text-scattered text-white">
+                    <span class="letter-float">I</span><span class="letter-float">s</span><span class="letter-float">h</span><span class="letter-float">q</span>
+                </span>
+            </div>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-4">begins here.</p>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+                Journey into the wonderful world of Raatladi® Garba
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <button class="bg-laal-600 hover:bg-laal-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
+                    BOOK YOUR PASS NOW!
+                </button>
+                <button class="border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition-all">
+                    WATCH TRAILER
+                </button>
+            </div>
+            
+            <p class="text-gray-500 animate-pulse">scroll to begin</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8">
+                    <span class="gradient-text">Mandli Garba</span> & <span class="text-gold-500">Tradition</span>
+                </h2>
+                <p class="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    The <em>only</em> authentic <strong>Garba celebration</strong> you will <em>ever</em> <strong>need.</strong>
+                </p>
+            </div>
+            
+            <button class="bg-laal-600 hover:bg-laal-700 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105 mb-16">
+                Experience Now
+            </button>
+            
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold mb-8">Cultural Goodness</h3>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+                    Raatladi® contains a blend of two powerful cultural experiences: Traditional Mandli Garba and Modern Celebration.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <h4 class="text-2xl font-bold text-gold-500 mb-4">100% Authentic & Traditional</h4>
+                        <p class="text-gray-400 text-lg">All naturally sourced <strong>cultural ingredients</strong> from Gujarat.</p>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-2xl font-bold text-laal-500 mb-4">Highest Quality Experience</h4>
+                        <p class="text-gray-400 text-lg">We value creating experiences from the highest-grade traditions that are pure and 100% authentic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Benefits Section -->
+    <section id="experience" class="py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-7xl font-black mb-8">
+                    The <em>real</em><br>
+                    <span class="gradient-text">limitless</span> experience.
+                </h2>
+                <p class="text-xl text-gray-400">discover the magic</p>
+            </div>
+            
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                Attending Raatladi® has a number of cultural benefits, continue on the journey to find out more.
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Energy & Joy -->
+                <div class="card-hover bg-gray-800/50 backdrop-blur-sm border border-laal-700/20 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-500">Energy & Joy</h3>
+                    <div class="text-sm text-gray-400 space-y-2">
+                        <p><strong>01</strong> Rich in cultural rhythms and beats that increase energy levels.</p>
+                        <p><strong>02</strong> Traditional music properties reduce stress and fatigue.</p>
+                    </div>
+                </div>
+                
+                <!-- Cultural Connection -->
+                <div class="card-hover bg-gray-800/50 backdrop-blur-sm border border-laal-700/20 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">🕺</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-500">Cultural Connection</h3>
+                    <div class="text-sm text-gray-400 space-y-2">
+                        <p><strong>01</strong> Deep-rooted traditional dance forms that connect you to heritage.</p>
+                        <p><strong>02</strong> Boosts cultural understanding and community bonding.</p>
+                    </div>
+                </div>
+                
+                <!-- Social Experience -->
+                <div class="card-hover bg-gray-800/50 backdrop-blur-sm border border-laal-700/20 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-500">Social Experience</h3>
+                    <div class="text-sm text-gray-400 space-y-2">
+                        <p><strong>01</strong> High-energy group activities that impact social health.</p>
+                        <p><strong>02</strong> Increases social function, networking and community spirit.</p>
+                    </div>
+                </div>
+                
+                <!-- Memorable Moments -->
+                <div class="card-hover bg-gray-800/50 backdrop-blur-sm border border-laal-700/20 rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl">📸</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gold-500">Memorable Moments</h3>
+                    <div class="text-sm text-gray-400 space-y-2">
+                        <p><strong>01</strong> Professional photography, premium decorations, and unforgettable experiences.</p>
+                        <p><strong>02</strong> Creates lasting memories with friends and family.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Badges Section -->
+    <section class="py-24 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">the miracle of tradition</h2>
+                <p class="text-xl">100% <strong>authentic</strong> and <strong>traditional</strong> <span class="text-laal-500">cultural experience.</span></p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">✓</span>
+                    </div>
+                    <p class="text-sm font-medium">All Ages Welcome</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">🏛️</span>
+                    </div>
+                    <p class="text-sm font-medium">Traditional Venue</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">🎵</span>
+                    </div>
+                    <p class="text-sm font-medium">Live Music</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">🍽️</span>
+                    </div>
+                    <p class="text-sm font-medium">Traditional Food</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">🛡️</span>
+                    </div>
+                    <p class="text-sm font-medium">Full Security</p>
+                </div>
+                <div class="text-center p-6 bg-gray-800/30 rounded-xl card-hover">
+                    <div class="w-12 h-12 bg-laal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-sm">📍</span>
+                    </div>
+                    <p class="text-sm font-medium">Ahmedabad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="py-24 relative">
+        <div class="absolute inset-0 z-0">
+            <!-- Traditional Gujarati festival venue setup -->
+            <div class="parallax-bg h-full" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');">
+                <!-- Beautifully decorated traditional Gujarati festival venue with colorful lights and decorations -->
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-laal-900/70 to-black/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-6xl md:text-8xl font-black mb-8">
+                A <em>better</em> y<span class="text-gold-500">o</span>u<br>
+                starts here
+            </h2>
+            
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Gujarat's best kept secret. Feel supercharged with our traditional blend of cultural experiences.
+            </p>
+            
+            <div class="bg-black/60 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto mb-8">
+                <h3 class="text-2xl font-bold text-gold-500 mb-4">MAHENDRA FARM</h3>
+                <p class="text-gray-300 mb-4">
+                    Explore the spacious and beautifully adorned grounds of Mahendra Farm, transformed into a dazzling haven for Garba enthusiasts right here in Ahmedabad.
+                </p>
+                <p class="text-sm text-gray-400">Search "MAHENDRA FARM" on Google Maps for exact location</p>
+            </div>
+            
+            <button class="bg-laal-600 hover:bg-laal-700 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105">
+                Get Directions
+            </button>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">What to Expect at <span class="gradient-text">Raatladi - Laal Ishq 2025</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">🎵 The Soul of Mandli Garba</h3>
+                    <p class="text-gray-400">Experience authentic, traditional Garba with live, powerhouse Mandli artists whose beats will compel you to dance all night long.</p>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">❤️ "Laal Ishq" Ambiance</h3>
+                    <p class="text-gray-400">Immerse yourself in the rich hues of "Laal Ishq" with stunning red-themed decor, creating a visually captivating atmosphere.</p>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">🎶 Unforgettable Music</h3>
+                    <p class="text-gray-400">Dance to timeless hits and electrifying new renditions by renowned artists, featuring celebrated performers.</p>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">👥 Premium Crowd & Experience</h3>
+                    <p class="text-gray-400">Known for sophisticated and energetic crowds, ensuring a joyous and memorable Garba celebration for all.</p>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">🌙 All-Night Celebration</h3>
+                    <p class="text-gray-400">From dhol beats to shehnai melodies, keep twirling till morning with continuous, vibrant music and dancing.</p>
+                </div>
+                
+                <div class="bg-gray-800/50 rounded-2xl p-8 card-hover">
+                    <h3 class="text-xl font-bold text-laal-500 mb-4">📸 Photo Booths & Installations</h3>
+                    <p class="text-gray-400">Capture unforgettable moments with specially designed photo opportunities and unique installations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="py-24 bg-gradient-to-b from-black via-laal-900/20 to-black relative">
+        <div class="absolute inset-0 z-0">
+            <!-- Red themed decorations and festival setup -->
+            <div class="parallax-bg opacity-30" style="background-image: url('https://pixabay.com/get/g1194791a52afa41f323a3dc45837a4f5d68a4b5a6d621370a870bb050fa7d348278c37d92b7c8128abb4e0cc1f33e4c1709503b6435cdf9edecb5af3e800d489_1280.jpg');">
+                <!-- Elegant red and gold themed decorations with traditional Indian festival elements -->
+            </div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-7xl font-black mb-8">
+                Book Your<br>
+                <span class="gradient-text">Laal Ishq</span> Experience
+            </h2>
+            
+            <div class="bg-black/80 backdrop-blur-md rounded-3xl p-12 mb-8">
+                <div class="mb-8">
+                    <h3 class="text-3xl font-bold text-gold-500 mb-4">Starting from ₹999</h3>
+                    <p class="text-gray-400 mb-6">Limited passes available - Book now to secure your spot!</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-laal-500 mb-3">Event Details:</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>📅 Navratri 2025 (September - October)</li>
+                            <li>⏰ 8:00 PM onwards, nightly</li>
+                            <li>📍 Mahendra Farm, Ahmedabad</li>
+                            <li>👨‍👩‍👧‍👦 All ages welcome</li>
+                        </ul>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold text-laal-500 mb-3">Includes:</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>✅ Traditional Gujarati delicacies</li>
+                            <li>✅ Professional photography</li>
+                            <li>✅ Premium decorations</li>
+                            <li>✅ Full security coverage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-laal-600 hover:bg-laal-700 text-white px-12 py-4 rounded-full text-xl font-semibold transition-all transform hover:scale-105">
+                        BOOK YOUR PASS NOW!
+                    </button>
+                    <button class="border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black px-12 py-4 rounded-full text-xl font-semibold transition-all">
+                        Watch Highlights
+                    </button>
+                </div>
+            </div>
+            
+            <p class="text-sm text-gray-500">
+                Book exclusively from: "Raatladi - The Mandli Garba - Laal Ishq'25 | Ahmedabad"
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Raatladi</h2>
+                <p class="text-gray-400 text-lg">Presented by Zala Events - Ahmedabad</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold text-gold-500 mb-4">Connect with us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 bg-laal-600 rounded-full flex items-center justify-center hover:bg-laal-700 transition-colors">
+                            <span class="text-sm">f</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-laal-600 rounded-full flex items-center justify-center hover:bg-laal-700 transition-colors">
+                            <span class="text-sm">@</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-laal-600 rounded-full flex items-center justify-center hover:bg-laal-700 transition-colors">
+                            <span class="text-sm">in</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gold-500 mb-4">Event Info</h3>
+                    <p class="text-gray-400">Mahendra Farm, Ahmedabad</p>
+                    <p class="text-gray-400">8:00 PM onwards</p>
+                    <p class="text-gray-400">All ages welcome</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gold-500 mb-4">Hashtags</h3>
+                    <div class="text-sm text-gray-400 space-y-1">
+                        <p>#RaatladiLaalIshq2025</p>
+                        <p>#MandliGarba #AhmedabadGarba</p>
+                        <p>#Navratri2025 #LaalIshq</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Raatladi - Laal Ishq. Presented by Zala Events - Ahmedabad. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen functionality
+        (function() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            
+            // Hide loading screen on click or after timeout
+            function hideLoading() {
+                loadingScreen.classList.add('hidden');
+                // TODO: Initialize audio context here
+            }
+            
+            document.addEventListener('click', hideLoading);
+            
+            // Auto-hide after 3 seconds
+            setTimeout(hideLoading, 3000);
+        })();
+
+        // Smooth scroll for navigation links
+        (function() {
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        })();
+
+        // Parallax effect for background images
+        (function() {
+            const parallaxElements = document.querySelectorAll('.parallax-bg');
+            
+            function updateParallax() {
+                const scrollY = window.pageYOffset;
+                
+                parallaxElements.forEach(element => {
+                    const rate = scrollY * -0.5;
+                    element.style.transform = `translateY(${rate}px)`;
+                });
+            }
+            
+            window.addEventListener('scroll', updateParallax);
+        })();
+
+        // Letter animation on hover
+        (function() {
+            const letters = document.querySelectorAll('.letter-float');
+            
+            letters.forEach(letter => {
+                letter.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.color = '#F59E0B';
+                });
+                
+                letter.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.color = '';
+                });
+            });
+        })();
+
+        // Fade in animation on scroll
+        (function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 1s ease-in forwards';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements with animation classes
+            const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+            animatedElements.forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+</html>
