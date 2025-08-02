@@ -105,19 +105,19 @@ export default function Gallery() {
     <div className="min-h-screen bg-gray-900">
       <Navigation />
       
-      <section className="pt-32 pb-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h1 className="text-6xl md:text-8xl font-black mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-4 md:mb-8">
               <span className="text-red-500 glow-effect">Gallery</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-2">
               Relive the magical moments from our Garba celebrations. Experience the joy, tradition, and vibrant energy of Raatladi - Laal Ishq 2025.
             </p>
           </motion.div>
@@ -236,55 +236,101 @@ export default function Gallery() {
                 <p className="text-gray-400 mt-4">Loading gallery...</p>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                 {galleryItems.map((item: GalleryItem, index: number) => (
                   <motion.div
                     key={item.id}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="glass-card rounded-2xl overflow-hidden group relative"
+                    className="group relative"
                   >
-                    {isAdmin && (
-                      <button
-                        onClick={() => deleteItemMutation.mutate(item.id)}
-                        className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <X className="h-4 w-4 text-white" />
-                      </button>
-                    )}
-                    
-                    <div className="aspect-video relative overflow-hidden">
-                      {item.type === 'image' ? (
-                        <img
-                          src={item.url}
-                          alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                      ) : (
-                        <div className="relative w-full h-full bg-gray-800 flex items-center justify-center">
+                    {/* Mobile: Simple layout without glass card for videos */}
+                    <div className="md:hidden">
+                      {isAdmin && (
+                        <button
+                          onClick={() => deleteItemMutation.mutate(item.id)}
+                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full"
+                        >
+                          <X className="h-4 w-4 text-white" />
+                        </button>
+                      )}
+                      
+                      <div className="aspect-video relative overflow-hidden rounded-xl">
+                        {item.type === 'image' ? (
+                          <img
+                            src={item.url}
+                            alt={item.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
                           <video
                             src={item.url}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-xl"
                             controls
+                            playsInline
+                            muted
                           />
-                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <Play className="h-12 w-12 text-red-500 opacity-80" />
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                      <div className="flex items-center justify-between text-sm text-gray-400">
-                        <span className="flex items-center">
-                          {item.type === 'image' ? <Image className="h-4 w-4 mr-1" /> : <Video className="h-4 w-4 mr-1" />}
-                          {item.type}
-                        </span>
-                        {item.isHomepage && (
-                          <span className="px-2 py-1 bg-red-600 text-white rounded-full text-xs">Homepage</span>
                         )}
+                      </div>
+                      
+                      <div className="mt-3">
+                        <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
+                        <div className="flex items-center justify-between text-sm text-gray-400">
+                          <span className="flex items-center">
+                            {item.type === 'image' ? <Image className="h-4 w-4 mr-1" /> : <Video className="h-4 w-4 mr-1" />}
+                            {item.type}
+                          </span>
+                          {item.isHomepage && (
+                            <span className="px-2 py-1 bg-red-600 text-white rounded-full text-xs">Homepage</span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Desktop: Full glass card layout */}
+                    <div className="hidden md:block glass-card rounded-2xl overflow-hidden">
+                      {isAdmin && (
+                        <button
+                          onClick={() => deleteItemMutation.mutate(item.id)}
+                          className="absolute top-2 right-2 z-10 p-2 bg-red-600 hover:bg-red-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                        >
+                          <X className="h-4 w-4 text-white" />
+                        </button>
+                      )}
+                      
+                      <div className="aspect-video relative overflow-hidden">
+                        {item.type === 'image' ? (
+                          <img
+                            src={item.url}
+                            alt={item.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        ) : (
+                          <div className="relative w-full h-full bg-gray-800 flex items-center justify-center">
+                            <video
+                              src={item.url}
+                              className="w-full h-full object-cover"
+                              controls
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                              <Play className="h-12 w-12 text-red-500 opacity-80" />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                        <div className="flex items-center justify-between text-sm text-gray-400">
+                          <span className="flex items-center">
+                            {item.type === 'image' ? <Image className="h-4 w-4 mr-1" /> : <Video className="h-4 w-4 mr-1" />}
+                            {item.type}
+                          </span>
+                          {item.isHomepage && (
+                            <span className="px-2 py-1 bg-red-600 text-white rounded-full text-xs">Homepage</span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </motion.div>
