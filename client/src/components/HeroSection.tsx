@@ -56,15 +56,28 @@ export default function HeroSection() {
         >
           {/* Main Title - Raatladi */}
           <div className="text-7xl md:text-9xl font-black mb-6 leading-none">
-            <div className="text-white glow-effect">
-              <LetterFloat>R</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>t</LetterFloat>
-              <LetterFloat>l</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>d</LetterFloat>
-              <LetterFloat>i</LetterFloat>
+            <div className="text-white glow-effect relative overflow-hidden">
+              <motion.div
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  background: 'linear-gradient(90deg, #ffffff 0%, #ef4444 25%, #fbbf24 50%, #ef4444 75%, #ffffff 100%)',
+                  backgroundSize: '200% 100%',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  filter: 'drop-shadow(0 0 20px rgba(239, 68, 68, 0.8))'
+                }}
+                className="font-black"
+              >
+                Raatladi
+              </motion.div>
             </div>
           </div>
           
