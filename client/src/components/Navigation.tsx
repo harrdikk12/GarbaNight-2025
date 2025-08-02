@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,27 +42,26 @@ export default function Navigation() {
           
           <div className="flex items-center space-x-8">
             <div className="hidden md:flex space-x-8">
-              {[
-                { name: 'Home', id: 'hero' },
-                { name: 'Gallery', id: 'gallery' }
-              ].map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="hover:text-yellow-500 transition-colors duration-300 text-lg font-medium"
-                >
-                  {item.name}
+              <Link href="/">
+                <button className="hover:text-yellow-500 transition-colors duration-300 text-lg font-medium">
+                  Home
                 </button>
-              ))}
+              </Link>
+              <Link href="/gallery">
+                <button className="hover:text-yellow-500 transition-colors duration-300 text-lg font-medium">
+                  Gallery
+                </button>
+              </Link>
             </div>
             
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button 
-                onClick={() => scrollToSection('tickets')}
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg glow-effect"
-              >
-                Book Now
-              </Button>
+              <Link href="/booking">
+                <Button 
+                  className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg glow-effect"
+                >
+                  Book Now
+                </Button>
+              </Link>
             </motion.div>
           </div>
         </div>

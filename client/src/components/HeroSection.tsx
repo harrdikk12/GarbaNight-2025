@@ -112,7 +112,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link href="/gallery">
+              <Link href="/booking">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
