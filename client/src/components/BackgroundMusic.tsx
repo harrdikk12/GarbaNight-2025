@@ -150,7 +150,6 @@ export default function BackgroundMusic() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={toggleMute}
-            onDoubleClick={() => setShowControls(true)}
             className="p-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg glow-effect"
           >
             {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}

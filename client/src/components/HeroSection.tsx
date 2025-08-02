@@ -57,14 +57,59 @@ export default function HeroSection() {
           {/* Main Title - Raatladi */}
           <div className="text-7xl md:text-9xl font-black mb-6 leading-none">
             <div className="text-white glow-effect">
-              <LetterFloat>R</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>t</LetterFloat>
-              <LetterFloat>l</LetterFloat>
-              <LetterFloat>a</LetterFloat>
-              <LetterFloat>d</LetterFloat>
-              <LetterFloat>i</LetterFloat>
+              {['R', 'a', 'a', 't', 'l', 'a', 'd', 'i'].map((letter, index) => {
+                const totalLetters = 8;
+                const leftToRightDelay = index * 0.15;
+                const rightToLeftDelay = 2 + (totalLetters - 1 - index) * 0.15;
+                
+                return (
+                  <motion.span
+                    key={index}
+                    className="inline-block letter-float"
+                    animate={{
+                      y: [0, -25, 0, 0, -25, 0],
+                      color: ['#ffffff', '#fbbf24', '#ffffff', '#ffffff', '#fbbf24', '#ffffff'],
+                      textShadow: [
+                        '0 0 10px rgba(239, 68, 68, 0.8)',
+                        '0 0 20px rgba(251, 191, 36, 1)',
+                        '0 0 10px rgba(239, 68, 68, 0.8)',
+                        '0 0 10px rgba(239, 68, 68, 0.8)',
+                        '0 0 20px rgba(251, 191, 36, 1)',
+                        '0 0 10px rgba(239, 68, 68, 0.8)'
+                      ]
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      times: [0, 0.5, 1, 0, 0.5, 1],
+                      repeat: Infinity,
+                      repeatDelay: 2,
+                      delay: leftToRightDelay,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <motion.span
+                      animate={{
+                        y: [0, -25, 0],
+                        color: ['#ffffff', '#fbbf24', '#ffffff'],
+                        textShadow: [
+                          '0 0 10px rgba(239, 68, 68, 0.8)',
+                          '0 0 20px rgba(251, 191, 36, 1)',
+                          '0 0 10px rgba(239, 68, 68, 0.8)'
+                        ]
+                      }}
+                      transition={{
+                        duration: 0.4,
+                        repeat: Infinity,
+                        repeatDelay: 2,
+                        delay: rightToLeftDelay,
+                        ease: "easeInOut"
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  </motion.span>
+                );
+              })}
             </div>
           </div>
           
