@@ -17,7 +17,7 @@ export default function AboutSection() {
           className="mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            <span className="laal-gradient">Garba</span> & <span className="text-yellow-500">Tradition</span>
+            <span className="text-red-500 glow-effect">Mandli Garba</span> & <span className="text-yellow-500">Tradition</span>
           </h2>
           <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             The <em>only</em> authentic <strong>Garba celebration</strong> you will <em>ever</em> <strong>need.</strong>
