@@ -149,7 +149,7 @@ export default function Gallery() {
               <div className="text-center">
                 <Dialog open={showAdminLogin} onOpenChange={setShowAdminLogin}>
                   <DialogTrigger asChild>
-                    <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white">
+                    <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white transform-gpu will-change-auto">
                       <Plus className="mr-2 h-4 w-4" />
                       Admin Access
                     </Button>

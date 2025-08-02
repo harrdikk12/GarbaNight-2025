@@ -216,3 +216,14 @@
 .animate-pulse-slow {
   animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Dialog positioning fix */
+[data-radix-dialog-content] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: 28rem !important;
+  width: calc(100% - 2rem) !important;
+  z-index: 50 !important;
+}
