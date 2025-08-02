@@ -97,9 +97,8 @@ export default function HeroSection() {
             >
               <Button
                 onClick={scrollToTickets}
-                variant="outline"
                 size="lg"
-                className="glass-card border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition-all"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
               >
                 BOOK YOUR PASS NOW!
               </Button>
@@ -109,9 +108,8 @@ export default function HeroSection() {
               whileTap={{ scale: 0.95 }}
             >
               <Button
-                variant="outline"
                 size="lg"
-                className="glass-card border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition-all"
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:bg-white hover:from-white hover:to-white hover:text-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-2xl glow-effect border-2 border-red-500 hover:border-red-600"
               >
                 WATCH TRAILER
               </Button>
