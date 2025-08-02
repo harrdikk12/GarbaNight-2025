@@ -33,38 +33,37 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold laal-gradient cursor-pointer"
+            className="text-3xl font-bold text-red-500 glow-effect cursor-pointer font-serif"
             onClick={() => scrollToSection('hero')}
           >
             Raatladi
           </motion.div>
           
-          <div className="hidden md:flex space-x-8">
-            {[
-              { name: 'Home', id: 'hero' },
-              { name: 'About', id: 'about' },
-              { name: 'Experience', id: 'experience' },
-              { name: 'Venue', id: 'venue' },
-              { name: 'Tickets', id: 'tickets' }
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="hover:text-yellow-500 transition-colors duration-300"
+          <div className="flex items-center space-x-8">
+            <div className="hidden md:flex space-x-8">
+              {[
+                { name: 'Home', id: 'hero' },
+                { name: 'Gallery', id: 'gallery' }
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="hover:text-yellow-500 transition-colors duration-300 text-lg font-medium"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button 
+                onClick={() => scrollToSection('tickets')}
+                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg glow-effect"
               >
-                {item.name}
-              </button>
-            ))}
+                Book Now
+              </Button>
+            </motion.div>
           </div>
-          
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button 
-              onClick={() => scrollToSection('tickets')}
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg glow-effect"
-            >
-              Book Now
-            </Button>
-          </motion.div>
         </div>
       </div>
     </motion.nav>
