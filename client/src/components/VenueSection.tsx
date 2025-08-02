@@ -29,8 +29,8 @@ export default function VenueSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-6xl md:text-8xl font-black mb-8">
-            <span className="text-red-500 glow-effect">A</span> <span className="text-red-500 glow-effect"><em>better</em></span> <span className="text-red-500 glow-effect">you</span><br />
-            <span className="text-red-500 glow-effect">starts here</span>
+            <span className="text-white glow-effect">A</span> <span className="text-white glow-effect"><em>better</em></span> <span className="text-white glow-effect">you</span><br />
+            <span className="text-white glow-effect">starts here</span>
           </h2>
           
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
