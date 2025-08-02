@@ -99,7 +99,7 @@ export default function HeroSection() {
                 onClick={scrollToTickets}
                 variant="outline"
                 size="lg"
-                className="glass-card border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-10 py-4 rounded-full text-lg font-semibold transition-all"
+                className="glass-card border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition-all"
               >
                 BOOK YOUR PASS NOW!
               </Button>
@@ -111,7 +111,7 @@ export default function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="glass-card border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-10 py-4 rounded-full text-lg font-semibold transition-all"
+                className="glass-card border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-10 py-4 rounded-full text-lg font-semibold transition-all"
               >
                 WATCH TRAILER
               </Button>
