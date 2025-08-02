@@ -144,16 +144,29 @@ export default function BackgroundMusic() {
 
         {/* Minimized State */}
         {!showControls && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setShowControls(true)}
-            className="p-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg glow-effect"
-          >
-            <Volume2 size={20} />
-          </motion.button>
+          <div className="flex flex-col space-y-2">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={toggleMute}
+              className="p-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg glow-effect"
+            >
+              {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+            </motion.button>
+            
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setShowControls(true)}
+              className="p-2 rounded-full bg-gray-800/80 hover:bg-gray-700/80 text-white shadow-lg text-xs"
+            >
+              +
+            </motion.button>
+          </div>
         )}
       </motion.div>
     </>
