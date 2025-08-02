@@ -58,15 +58,26 @@ app.use((req, res, next) => {
     console.error(err);
   });
 
-  // Vite setup for development, static serving for production
   // In production, serve static files from dist/public
   if (process.env.NODE_ENV === 'production') {
     const staticPath = path.join(__dirname, '..', 'dist', 'public');
-    app.use(express.static(staticPath));
     
-    // Handle SPA routing
+    // Serve static files
+    app.use(express.static(staticPath, {
+      index: false, // Don't serve index.html for directories
+      extensions: ['html', 'js', 'css', 'json', 'png', 'jpg', 'jpeg', 'svg']
+    }));
+    
+    // Handle SPA routing - serve index.html for all other routes
     app.get('*', (req, res) => {
-      res.sendFile(path.join(staticPath, 'index.html'));
+      res.sendFile(path.join(staticPath, 'index.html'), {
+        headers: {
+          'Content-Type': 'text/html; charset=UTF-8',
+          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        }
+      });
     });
   } else {
     // In development, use Vite dev server

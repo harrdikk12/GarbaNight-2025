@@ -5,8 +5,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/public",
-        "outputDirectory": "dist/public"
+        "distDir": "dist/public"
       }
     },
     {
@@ -17,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.ts"
+      "dest": "/api/$1"
     },
     {
       "src": "/assets/(.*)",
@@ -27,5 +26,8 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
