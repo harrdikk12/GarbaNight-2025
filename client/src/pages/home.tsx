@@ -6,6 +6,7 @@ import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import VenueSection from "@/components/VenueSection";
 import HighlightsSection from "@/components/HighlightsSection";
+import GalleryPreview from "@/components/GalleryPreview";
 import TicketsSection from "@/components/TicketsSection";
 import Footer from "@/components/Footer";
 
@@ -38,6 +39,7 @@ export default function Home() {
       <ExperienceSection />
       <VenueSection />
       <HighlightsSection />
+      <GalleryPreview />
       <TicketsSection />
       <Footer />
     </div>
